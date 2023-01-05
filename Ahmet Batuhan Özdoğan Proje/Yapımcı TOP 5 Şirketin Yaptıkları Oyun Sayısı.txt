@@ -1,0 +1,17 @@
+  vgsalestrson1$Publisher=as.factor(vgsalestrson1$Publisher)
+  vgsalestrson5 = vgsalestrson1 %>%
+    group_by(Publisher) %>%
+    summarise(sayi = n())
+  
+  vgsalestrson5 %>%
+    filter(sayi >= 830L & sayi <= 1360L) %>%
+    ggplot() +
+    aes(x =reorder(Publisher,+sayi), y = sayi, fill = Publisher) +
+    geom_col() +
+    scale_fill_brewer(palette = "Set1", direction = 1) +
+    labs(
+      x = "Yapımcı",
+      y = "Yapılan Oyun Sayısı",
+      title = "Yapımcı TOP 5 Şirketin Yaptıkları Oyun Sayısı") +
+    theme_gray() +
+    ylim(0,1500)

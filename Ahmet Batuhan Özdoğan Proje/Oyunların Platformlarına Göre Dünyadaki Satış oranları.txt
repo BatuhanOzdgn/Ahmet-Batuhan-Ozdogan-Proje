@@ -1,0 +1,14 @@
+  vgsalestrsonayrı2 %>%
+    filter(oran >= 0.05 & oran <= 0.405) %>%
+    ggplot() +
+    aes(x = reorder(Platform,+oran) , y = oran, fill = Platform) +
+    geom_col(color = "black") +
+    labs(
+      fill = "Oyun Platformları",
+      x = "Oyun Platformları",
+      y = "Satılan Oyun oranı",
+      title = "En Çok Oyun Satılan 5 Platform ve Satış Oranları" ) +
+    scale_fill_jcolors(palette = "rainbow") +
+    theme_classic() +
+    coord_flip() +
+    ylim(0,0.45)

@@ -1,0 +1,11 @@
+  ggplot(vgsalestrsonayrı3) +
+    aes(x =reorder(Genre,+oran), y = oran , fill = Genre) +
+    geom_col(color = "black") +
+    labs(
+      fill = "Oyun Türleri",
+      x = "Oyun Türleri",
+      y = "Satış Oranları",
+      title = "Oyunların Türlerine Göre Dünyadaki satış oranları" ) +
+    theme_classic()+
+    coord_flip() +
+    ylim(0,0.25)

@@ -1,0 +1,16 @@
+  vgsalestrson1 %>%
+    filter(Year >= 2000L & Year <= 2016L) %>%
+    ggplot() +
+    aes(x = Genre , fill = Genre ) +
+    geom_bar(color = "black") +
+    scale_fill_hue(direction = 1) +
+    scale_color_gradient() +
+    labs(
+      x = "Oyun Türleri",
+      y = "Dünya Satışları (milyon)",
+      title = "2000-2016 Yılları Arasında Dünyada En Çok Satılan Oyun Türleri"
+    ) +
+    coord_flip() +
+    theme_minimal() +
+    ylim(0,300) +
+    facet_wrap(vars(Year))
