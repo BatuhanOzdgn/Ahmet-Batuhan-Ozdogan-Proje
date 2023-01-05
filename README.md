@@ -1,2 +1,2 @@
-# Veri-G-rselle-tirme-proje
-2022 Bhmet Batuhan Özdoğan proje
+# Veri-Gorsellestirme-proje
+2022 Ahmet Batuhan Özdoğan proje
